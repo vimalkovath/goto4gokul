@@ -2,6 +2,7 @@
   "name": "nodeserver_code",
   "version": "1.0.0",
   "description": "",
+  "start": "node index.js",
   "main": "node index.js",
   "scripts": {
     "start": "node index.js",
