@@ -62,7 +62,11 @@ app.use(function (err, req, res, next) {
 
 // const server = http.createServer((request, response) => {
 //     response.writeHead(200, {"Content-Type": "text/plain"});
+<<<<<<< HEAD
+//     response.end("am vimal!");
+=======
 //     response.end("Hello vimal!");
+>>>>>>> server
 // });
 
 // const port = process.env.PORT || 1337;
@@ -72,4 +76,8 @@ app.use(function (err, req, res, next) {
 
 
 
+<<<<<<< HEAD
+// console.log("Server running.. at http://localhost:%d", port);
+=======
 // console.log("Server running at http://localhost:%d", port);
+>>>>>>> server
