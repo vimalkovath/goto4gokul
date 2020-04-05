@@ -1,11 +1,9 @@
 {
   "name": "nodeserver_code",
   "version": "1.0.0",
-  "description": "",
-  "start": "node index.js",
-  "main": "index.js",
+  "description": "Simple Hello World Node.js sample for Azure App Service",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
