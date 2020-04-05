@@ -9,7 +9,6 @@ import { Moredetails } from './users';
 export class CycleformService {
   private BaseUrl1 = `/log`;
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-
   constructor(private http: HttpClient) { }
   getuserdetails() {
     return this.http.get(this.BaseUrl1 + '/getbookingdetails');
