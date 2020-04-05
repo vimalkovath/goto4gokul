@@ -9,7 +9,11 @@
 
 # dependencies
 # /node_modules
+<<<<<<< HEAD
  /frontend
+=======
+/frontend
+>>>>>>> server
 
 # profiling files
 chrome-profiler-events*.json

@@ -7,7 +7,7 @@ import { Moredetails } from './users';
   providedIn: 'root'
 })
 export class CycleformService {
-  private BaseUrl1 = `https://gobyk-stg.azurewebsites.net/log`;
+  private BaseUrl1 = `/log`;
 
   constructor(private http: HttpClient) { }
   getuserdetails() {

@@ -1521,7 +1521,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, CycleformService);
 
         this.http = http;
-        this.BaseUrl1 = "http://localhost:8080/log";
+        this.BaseUrl1 = "/log";
       }
 
       _createClass(CycleformService, [{
@@ -1631,7 +1631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, UserapiService);
 
         this.http = http;
-        this.BaseUrl = "http://localhost:8080/log";
+        this.BaseUrl = "/log";
       }
 
       _createClass(UserapiService, [{
