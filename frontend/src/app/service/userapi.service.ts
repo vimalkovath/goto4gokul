@@ -7,7 +7,8 @@ import { User } from './users';
   providedIn: 'root'
 })
 export class UserapiService {
-  private BaseUrl = `http://localhost:8080/log`;
+  private BaseUrl = `https://gobyk-dev.azurewebsites.net/log`;
+
 
   constructor(private http: HttpClient) { }
 
