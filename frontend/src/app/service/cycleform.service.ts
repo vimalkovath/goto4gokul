@@ -34,4 +34,3 @@ export class CycleformService {
       .subscribe(res => console.log('Done', users));
   }
 }
-
