@@ -28,7 +28,7 @@ app.use('/log', userdatas);
 app.use('/log', bookingdetails);
 
 
-const port = process.env.PORT || 1337;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => {
   console.log('Connected to port ' + port)

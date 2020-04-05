@@ -7,7 +7,7 @@ import { User } from './users';
   providedIn: 'root'
 })
 export class UserapiService {
-  private BaseUrl = `https://gobyk-dev.azurewebsites.net/log`;
+  private BaseUrl = `https://dashboard.heroku.com/log`;
 
 
   constructor(private http: HttpClient) { }
