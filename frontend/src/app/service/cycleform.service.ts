@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { User } from './users';
 import { Moredetails } from './users';
 
@@ -8,13 +8,14 @@ import { Moredetails } from './users';
 })
 export class CycleformService {
   private BaseUrl1 = `/log`;
+  headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
   getuserdetails() {
     return this.http.get(this.BaseUrl1 + '/getbookingdetails');
   }
   addmoredetails(moredetails: Moredetails) {
-    return this.http.post(this.BaseUrl1 + '/bookingdetails', moredetails);
+    return this.http.post(this.BaseUrl1 + '/bookingdetails', moredetails, { headers: this.headers });
   }
   getuserinfo() {
     return this.http.get(this.BaseUrl1 + '/getbookingdetails');
