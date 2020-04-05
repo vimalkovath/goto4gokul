@@ -2,6 +2,7 @@
   "name": "nodeserver_code",
   "version": "1.0.0",
   "description": "Simple Hello World Node.js sample for Azure App Service",
+  "private": true,
   "scripts": {
     "start": "node index.js"
   },
