@@ -774,16 +774,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 class CycleformService {
     constructor(http) {
         this.http = http;
         this.BaseUrl1 = `/log`;
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
     }
     getuserdetails() {
         return this.http.get(this.BaseUrl1 + '/getbookingdetails');
     }
     addmoredetails(moredetails) {
-        return this.http.post(this.BaseUrl1 + '/bookingdetails', moredetails);
+        return this.http.post(this.BaseUrl1 + '/bookingdetails', moredetails, { headers: this.headers });
     }
     getuserinfo() {
         return this.http.get(this.BaseUrl1 + '/getbookingdetails');
@@ -824,8 +826,9 @@ CycleformService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserapiService", function() { return UserapiService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm2015/add/operator/map.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm2015/add/operator/map.js");
+
 
 
 
@@ -834,12 +837,13 @@ class UserapiService {
     constructor(http) {
         this.http = http;
         this.BaseUrl = `/log`;
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
     }
     cerateaccount(userdetails) {
-        return this.http.post(this.BaseUrl + '/signup', userdetails);
+        return this.http.post(this.BaseUrl + '/signup', userdetails, { headers: this.headers });
     }
     login(userdetails) {
-        return this.http.post(this.BaseUrl + '/login', userdetails)
+        return this.http.post(this.BaseUrl + '/login', userdetails, { headers: this.headers })
             .map(user => {
             if (user) {
                 localStorage.setItem('currentUser', JSON.stringify(user));
@@ -851,14 +855,14 @@ class UserapiService {
         localStorage.removeItem('currentUser');
     }
 }
-UserapiService.ɵfac = function UserapiService_Factory(t) { return new (t || UserapiService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
+UserapiService.ɵfac = function UserapiService_Factory(t) { return new (t || UserapiService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
 UserapiService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: UserapiService, factory: UserapiService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](UserapiService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
