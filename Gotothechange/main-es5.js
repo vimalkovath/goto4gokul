@@ -1522,6 +1522,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.http = http;
         this.BaseUrl1 = "/log";
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
       }
 
       _createClass(CycleformService, [{
@@ -1532,7 +1533,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addmoredetails",
         value: function addmoredetails(moredetails) {
-          return this.http.post(this.BaseUrl1 + '/bookingdetails', moredetails);
+          return this.http.post(this.BaseUrl1 + '/bookingdetails', moredetails, {
+            headers: this.headers
+          });
         }
       }, {
         key: "getuserinfo",
@@ -1616,15 +1619,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! rxjs/add/operator/map */
-    "./node_modules/rxjs-compat/_esm2015/add/operator/map.js");
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+    var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs/add/operator/map */
+    "./node_modules/rxjs-compat/_esm2015/add/operator/map.js");
 
     var UserapiService = /*#__PURE__*/function () {
       function UserapiService(http) {
@@ -1632,17 +1635,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.http = http;
         this.BaseUrl = "/log";
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set('Content-Type', 'application/json');
       }
 
       _createClass(UserapiService, [{
         key: "cerateaccount",
         value: function cerateaccount(userdetails) {
-          return this.http.post(this.BaseUrl + '/signup', userdetails);
+          return this.http.post(this.BaseUrl + '/signup', userdetails, {
+            headers: this.headers
+          });
         }
       }, {
         key: "login",
         value: function login(userdetails) {
-          return this.http.post(this.BaseUrl + '/login', userdetails).map(function (user) {
+          return this.http.post(this.BaseUrl + '/login', userdetails, {
+            headers: this.headers
+          }).map(function (user) {
             if (user) {
               localStorage.setItem('currentUser', JSON.stringify(user));
             }
@@ -1661,7 +1669,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     UserapiService.ɵfac = function UserapiService_Factory(t) {
-      return new (t || UserapiService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      return new (t || UserapiService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]));
     };
 
     UserapiService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
@@ -1679,7 +1687,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
         }];
       }, null);
     })();
