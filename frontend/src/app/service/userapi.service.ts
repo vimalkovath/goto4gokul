@@ -7,7 +7,7 @@ import { User } from './users';
   providedIn: 'root'
 })
 export class UserapiService {
-  private BaseUrl = `https://dashboard.heroku.com/log`;
+  private BaseUrl = `/log`;
 
 
   constructor(private http: HttpClient) { }
