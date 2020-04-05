@@ -1521,7 +1521,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, CycleformService);
 
         this.http = http;
-        this.BaseUrl1 = "https://gobyk-stg.azurewebsites.net/log";
+        this.BaseUrl1 = "https://dashboard.heroku.com/log";
       }
 
       _createClass(CycleformService, [{
@@ -1631,7 +1631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, UserapiService);
 
         this.http = http;
-        this.BaseUrl = "https://gobyk-dev.azurewebsites.net/log";
+        this.BaseUrl = "https://dashboard.heroku.com/log";
       }
 
       _createClass(UserapiService, [{

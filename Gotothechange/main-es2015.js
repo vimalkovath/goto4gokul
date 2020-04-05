@@ -777,7 +777,7 @@ __webpack_require__.r(__webpack_exports__);
 class CycleformService {
     constructor(http) {
         this.http = http;
-        this.BaseUrl1 = `https://gobyk-stg.azurewebsites.net/log`;
+        this.BaseUrl1 = `https://dashboard.heroku.com/log`;
     }
     getuserdetails() {
         return this.http.get(this.BaseUrl1 + '/getbookingdetails');
@@ -833,7 +833,7 @@ __webpack_require__.r(__webpack_exports__);
 class UserapiService {
     constructor(http) {
         this.http = http;
-        this.BaseUrl = `https://gobyk-dev.azurewebsites.net/log`;
+        this.BaseUrl = `https://dashboard.heroku.com/log`;
     }
     cerateaccount(userdetails) {
         return this.http.post(this.BaseUrl + '/signup', userdetails);
